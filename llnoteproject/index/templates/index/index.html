@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{{ request.session }}
+{{ request.COOKIES }}
+{% if request.session.username %}
+<p>
+    欢迎{{ request.session.username}}
+</p>
+<p>
+    <a href="">退出登录</a>
+</p>
+<p>
+    <a href="">进入笔记</a>
+</p>
+{% else %}
+{% if request.COOKIES.username %}
+<p>
+    欢迎{{ request.COOKIES.username}}
+</p>
+<p>
+    <a href="">退出登录</a>
+</p>
+<p>
+    <a href="">进入笔记</a>
+</p>
+{%else%}
+<p>
+    <a href="/user/login_view">登录</a>
+</p>
+<p>
+    <a href="/user/reg_view">注册</a>
+</p>
+{%endif%}
+{%endif%}
+</body>
+</html>

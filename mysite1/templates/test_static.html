@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>静态文件测试</title>
+</head>
+<body>
+<img src="/static/image/django-logo.jpg" width="200px" height="200px">
+
+<!--STATIC_URL 改变时，会自动改变 -->
+{% load static %}
+<img src="{% static 'image/django-logo2.jpg'%}" width="200px" height="200px">
+</body>
+</html>

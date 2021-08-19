@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>url测试</title>
+</head>
+<body>
+<a href="http://127.0.0.1/test_url_result">绝对地址</a>
+<br>
+<a href="/test_url_result">带"/"的相对地址</a>
+<br>
+<a href="test_url_result">不带"/"的相对地址,看浏览器左下角，这个url是没有配置的</a>
+<br>
+<br>
+<a href="{%url 'test_url_result'%}">template的不带参数url反向解析版本</a>
+<br>
+<a href="{%url 'tr' '100'%}">template的带参数url反向解析版本</a>
+<br>
+<a href="{%url 'url302'%}">视图的url反向解析版本</a>
+</body>
+</html>
